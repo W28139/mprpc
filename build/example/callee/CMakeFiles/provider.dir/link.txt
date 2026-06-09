@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/provider.dir/userservice.cc.o CMakeFiles/provider.dir/__/user.pb.cc.o -o /home/wevix/my_mprpc/bin/provider   -L/home/wevix/my_mprpc/lib  -Wl,-rpath,/home/wevix/my_mprpc/lib /home/wevix/my_mprpc/lib/libmprpc.so -lprotobuf 
