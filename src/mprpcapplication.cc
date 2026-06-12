@@ -3,10 +3,12 @@
 #include<unistd.h>
 #include<string>
 
+// 定义静态成员变量
+MprpcConfig MprpcApplication::m_config; 
+
 void ShowArgsHelp()
 {
     std::cout<<"format: command -i <configfile>"<<std::endl;
-
 }
 
 
@@ -24,7 +26,7 @@ void MprpcApplication::Init(int argc, char **argv)
     int c = 0; 
     std::string config_file;
 
-    while(c = getopt(argc,argv,"i:")!=-1)
+    while((c = getopt(argc,argv,"i:"))!=-1)
     {
         switch (c)
         {
@@ -42,8 +44,20 @@ void MprpcApplication::Init(int argc, char **argv)
             break;
         }
     }
+    
+    if (config_file.empty()) {
+        ShowArgsHelp();
+        exit(EXIT_FAILURE);
+    }
 
     // 开始加载配置文件 rpcserver_ip=   rpcserver_port=   zookeeper_ip=   zookeeper_ip=
+    // 普通成员变量无法在静态成员函数中访问，要改为静态成员函数
+    m_config.LoadConfigFile(config_file.c_str());
+
+    // std::cout << "rpcserverip:" << m_config.Load("rpcserverip") << std::endl;
+    // std::cout << "rpcserverport:" << m_config.Load("rpcserverport") << std::endl;
+    // std::cout << "zookeeperip:" << m_config.Load("zookeeperip") << std::endl;
+    // std::cout << "zookeeperport:" << m_config.Load("zookeeperport") << std::endl;
 }
 
 MprpcApplication& MprpcApplication::GetInstance()
@@ -52,3 +66,7 @@ MprpcApplication& MprpcApplication::GetInstance()
     return app;
 }
 
+MprpcConfig& MprpcApplication::GetConfig()
+{
+    return m_config;
+}

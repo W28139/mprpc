@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/wevix/my_mprpc/src/include -I/home/wevix/my_mprpc/example
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

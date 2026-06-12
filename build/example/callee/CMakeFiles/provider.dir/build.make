@@ -108,7 +108,7 @@ provider_EXTERNAL_OBJECTS =
 /home/wevix/my_mprpc/bin/provider: example/callee/CMakeFiles/provider.dir/userservice.cc.o
 /home/wevix/my_mprpc/bin/provider: example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o
 /home/wevix/my_mprpc/bin/provider: example/callee/CMakeFiles/provider.dir/build.make
-/home/wevix/my_mprpc/bin/provider: /home/wevix/my_mprpc/lib/libmprpc.so
+/home/wevix/my_mprpc/bin/provider: /home/wevix/my_mprpc/lib/libmprpc.a
 /home/wevix/my_mprpc/bin/provider: example/callee/CMakeFiles/provider.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wevix/my_mprpc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/wevix/my_mprpc/bin/provider"
 	cd /home/wevix/my_mprpc/build/example/callee && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/provider.dir/link.txt --verbose=$(VERBOSE)
