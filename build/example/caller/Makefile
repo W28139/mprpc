@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wevix/my_mprpc/build/CMakeFiles /home/wevix/my_mprpc/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/wevix/my_mprpc/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wevix/my_mprpc/build/CMakeFiles /home/wevix/my_mprpc/build/example/caller//CMakeFiles/progress.marks
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/wevix/my_mprpc/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,57 +103,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wevix/my_mprpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named mprpc
+# Convenience name for target.
+example/caller/CMakeFiles/consumer.dir/rule:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/consumer.dir/rule
+.PHONY : example/caller/CMakeFiles/consumer.dir/rule
 
-# Build rule for target.
-mprpc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mprpc
-.PHONY : mprpc
-
-# fast build rule for target.
-mprpc/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
-.PHONY : mprpc/fast
-
-#=============================================================================
-# Target rules for targets named provider
-
-# Build rule for target.
-provider: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 provider
-.PHONY : provider
-
-# fast build rule for target.
-provider/fast:
-	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
-.PHONY : provider/fast
-
-#=============================================================================
-# Target rules for targets named consumer
-
-# Build rule for target.
-consumer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consumer
+# Convenience name for target.
+consumer: example/caller/CMakeFiles/consumer.dir/rule
 .PHONY : consumer
 
 # fast build rule for target.
 consumer/fast:
-	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
 .PHONY : consumer/fast
+
+__/user.pb.o: __/user.pb.cc.o
+.PHONY : __/user.pb.o
+
+# target to build an object file
+__/user.pb.cc.o:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.o
+.PHONY : __/user.pb.cc.o
+
+__/user.pb.i: __/user.pb.cc.i
+.PHONY : __/user.pb.i
+
+# target to preprocess a source file
+__/user.pb.cc.i:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.i
+.PHONY : __/user.pb.cc.i
+
+__/user.pb.s: __/user.pb.cc.s
+.PHONY : __/user.pb.s
+
+# target to generate assembly for a file
+__/user.pb.cc.s:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.s
+.PHONY : __/user.pb.cc.s
+
+calluserservice.o: calluserservice.cc.o
+.PHONY : calluserservice.o
+
+# target to build an object file
+calluserservice.cc.o:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o
+.PHONY : calluserservice.cc.o
+
+calluserservice.i: calluserservice.cc.i
+.PHONY : calluserservice.i
+
+# target to preprocess a source file
+calluserservice.cc.i:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/calluserservice.cc.i
+.PHONY : calluserservice.cc.i
+
+calluserservice.s: calluserservice.cc.s
+.PHONY : calluserservice.s
+
+# target to generate assembly for a file
+calluserservice.cc.s:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/calluserservice.cc.s
+.PHONY : calluserservice.cc.s
 
 # Help Target
 help:
@@ -164,8 +187,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... consumer"
-	@echo "... mprpc"
-	@echo "... provider"
+	@echo "... __/user.pb.o"
+	@echo "... __/user.pb.i"
+	@echo "... __/user.pb.s"
+	@echo "... calluserservice.o"
+	@echo "... calluserservice.i"
+	@echo "... calluserservice.s"
 .PHONY : help
 
 
@@ -177,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wevix/my_mprpc/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

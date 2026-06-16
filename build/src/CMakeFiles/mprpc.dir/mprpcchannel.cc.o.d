@@ -1,6 +1,6 @@
-src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
- /home/wevix/my_mprpc/src/rpcprovider.cc /usr/include/stdc-predef.h \
- /home/wevix/my_mprpc/src/include/rpcprovider.h \
+src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: \
+ /home/wevix/my_mprpc/src/mprpcchannel.cc /usr/include/stdc-predef.h \
+ /home/wevix/my_mprpc/src/include/mprpcchannel.h \
  /usr/include/google/protobuf/service.h /usr/include/c++/13/string \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -204,43 +204,58 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
- /usr/local/include/muduo/net/TcpServer.h \
- /usr/local/include/muduo/base/Atomic.h \
- /usr/local/include/muduo/base/noncopyable.h \
- /usr/local/include/muduo/base/Types.h \
- /usr/local/include/muduo/net/TcpConnection.h \
- /usr/local/include/muduo/base/StringPiece.h \
- /usr/local/include/muduo/net/Callbacks.h \
- /usr/local/include/muduo/base/Timestamp.h \
- /usr/local/include/muduo/base/copyable.h \
- /usr/include/boost/operators.hpp /usr/include/c++/13/iterator \
- /usr/include/c++/13/bits/stream_iterator.h /usr/include/boost/config.hpp \
- /usr/include/boost/config/user.hpp \
- /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp \
- /usr/include/boost/config/detail/select_stdlib_config.hpp \
- /usr/include/c++/13/version \
- /usr/include/boost/config/stdlib/libstdcpp3.hpp /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
- /usr/include/boost/config/detail/select_platform_config.hpp \
- /usr/include/boost/config/platform/linux.hpp \
- /usr/include/boost/config/detail/posix_features.hpp \
- /usr/include/boost/config/detail/suffix.hpp \
- /usr/include/boost/config/helper_macros.hpp \
- /usr/include/boost/config/detail/cxx_composite.hpp \
- /usr/include/boost/detail/workaround.hpp \
- /usr/include/boost/config/workaround.hpp \
- /usr/include/boost/core/addressof.hpp /usr/include/c++/13/functional \
+ /usr/include/google/protobuf/descriptor.h /usr/include/c++/13/atomic \
+ /usr/include/google/protobuf/stubs/logging.h \
+ /usr/include/google/protobuf/stubs/status.h \
+ /usr/include/google/protobuf/stubs/mutex.h /usr/include/c++/13/mutex \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/bits/std_mutex.h \
+ /usr/include/c++/13/bits/unique_lock.h \
+ /usr/include/google/protobuf/stubs/once.h /usr/include/c++/13/utility \
+ /usr/include/c++/13/bits/stl_relops.h \
+ /usr/include/google/protobuf/port.h \
+ /usr/include/google/protobuf/message.h \
+ /usr/include/google/protobuf/stubs/casts.h \
+ /usr/include/google/protobuf/arena.h \
+ /usr/include/google/protobuf/arena_impl.h \
+ /usr/include/google/protobuf/arenaz_sampler.h \
+ /usr/include/google/protobuf/generated_message_reflection.h \
+ /usr/include/google/protobuf/generated_enum_reflection.h \
+ /usr/include/google/protobuf/stubs/strutil.h \
+ /usr/include/google/protobuf/generated_enum_util.h \
+ /usr/include/google/protobuf/message_lite.h /usr/include/c++/13/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+ /usr/include/google/protobuf/io/coded_stream.h \
+ /usr/include/google/protobuf/explicitly_constructed.h \
+ /usr/include/google/protobuf/metadata_lite.h \
+ /usr/include/google/protobuf/unknown_field_set.h \
+ /usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ /usr/include/google/protobuf/io/zero_copy_stream.h \
+ /usr/include/google/protobuf/stubs/stl_util.h \
+ /usr/include/google/protobuf/parse_context.h \
+ /usr/include/google/protobuf/arenastring.h \
+ /usr/include/google/protobuf/endian.h \
+ /usr/include/google/protobuf/implicit_weak_message.h \
+ /usr/include/google/protobuf/repeated_field.h \
+ /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
+ /usr/include/google/protobuf/repeated_ptr_field.h \
+ /usr/include/google/protobuf/inlined_string_field.h \
+ /usr/include/google/protobuf/wire_format_lite.h \
+ /usr/include/google/protobuf/generated_message_util.h \
+ /usr/include/google/protobuf/any.h \
+ /usr/include/google/protobuf/has_bits.h \
+ /usr/include/google/protobuf/map.h /usr/include/c++/13/functional \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/array \
- /usr/include/c++/13/compare /usr/local/include/muduo/net/Buffer.h \
- /usr/local/include/muduo/net/Endian.h \
- /usr/local/include/muduo/net/InetAddress.h /usr/include/netinet/in.h \
+ /usr/include/c++/13/compare \
+ /usr/include/google/protobuf/map_type_handler.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
@@ -257,99 +272,16 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/x86_64-linux-gnu/asm/sockios.h \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
- /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/boost/any.hpp \
- /usr/include/boost/any/bad_any_cast.hpp /usr/include/boost/any/fwd.hpp \
- /usr/include/boost/config/pragma_message.hpp \
- /usr/include/boost/type_traits/alignment_of.hpp \
- /usr/include/boost/type_traits/intrinsics.hpp \
- /usr/include/boost/type_traits/detail/config.hpp \
- /usr/include/boost/version.hpp \
- /usr/include/boost/type_traits/integral_constant.hpp \
- /usr/include/boost/any/detail/placeholder.hpp \
- /usr/include/boost/type_index.hpp \
- /usr/include/boost/type_index/stl_type_index.hpp \
- /usr/include/boost/type_index/type_index_facade.hpp \
- /usr/include/boost/container_hash/hash_fwd.hpp \
- /usr/include/boost/static_assert.hpp \
- /usr/include/boost/throw_exception.hpp \
- /usr/include/boost/exception/exception.hpp \
- /usr/include/boost/assert/source_location.hpp \
- /usr/include/boost/current_function.hpp /usr/include/boost/cstdint.hpp \
- /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
- /usr/include/boost/core/demangle.hpp /usr/include/c++/13/cxxabi.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h \
- /usr/include/boost/type_traits/conditional.hpp \
- /usr/include/boost/type_traits/is_const.hpp \
- /usr/include/boost/type_traits/is_reference.hpp \
- /usr/include/boost/type_traits/is_lvalue_reference.hpp \
- /usr/include/boost/type_traits/is_rvalue_reference.hpp \
- /usr/include/boost/type_traits/is_volatile.hpp \
- /usr/include/boost/type_traits/remove_cv.hpp \
- /usr/include/boost/type_traits/remove_reference.hpp \
- /usr/include/boost/type_traits/decay.hpp \
- /usr/include/boost/type_traits/is_array.hpp \
- /usr/include/boost/type_traits/is_function.hpp \
- /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
- /usr/include/boost/type_traits/remove_bounds.hpp \
- /usr/include/boost/type_traits/remove_extent.hpp \
- /usr/include/boost/type_traits/add_pointer.hpp \
- /usr/include/boost/type_traits/add_reference.hpp \
- /usr/include/boost/core/enable_if.hpp \
- /usr/include/boost/type_traits/is_same.hpp \
- /usr/local/include/muduo/net/EventLoop.h /usr/include/c++/13/atomic \
- /usr/local/include/muduo/base/Mutex.h \
- /usr/local/include/muduo/base/CurrentThread.h \
- /usr/local/include/muduo/net/TimerId.h \
- /home/wevix/my_mprpc/src/include/mprpcapplication.h \
- /home/wevix/my_mprpc/src/include/mprpcconfig.h \
- /usr/include/google/protobuf/descriptor.h \
- /usr/include/google/protobuf/stubs/logging.h \
- /usr/include/google/protobuf/stubs/status.h \
- /usr/include/google/protobuf/stubs/mutex.h /usr/include/c++/13/mutex \
- /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
- /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
- /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h \
- /usr/include/google/protobuf/stubs/once.h \
- /usr/include/google/protobuf/port.h \
+ /usr/include/arpa/inet.h /usr/include/netinet/in.h \
+ /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
  /home/wevix/my_mprpc/src/include/rpcheader.pb.h \
- /usr/include/google/protobuf/io/coded_stream.h \
- /usr/include/c++/13/climits \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/google/protobuf/stubs/strutil.h \
- /usr/include/google/protobuf/arena.h \
- /usr/include/google/protobuf/arena_impl.h \
- /usr/include/google/protobuf/arenaz_sampler.h \
- /usr/include/google/protobuf/arenastring.h \
- /usr/include/google/protobuf/explicitly_constructed.h \
- /usr/include/google/protobuf/generated_message_util.h \
- /usr/include/google/protobuf/any.h \
- /usr/include/google/protobuf/message_lite.h \
- /usr/include/google/protobuf/metadata_lite.h \
- /usr/include/google/protobuf/has_bits.h \
- /usr/include/google/protobuf/implicit_weak_message.h \
- /usr/include/google/protobuf/repeated_field.h \
- /usr/include/google/protobuf/repeated_ptr_field.h \
- /usr/include/google/protobuf/wire_format_lite.h \
- /usr/include/google/protobuf/stubs/casts.h \
- /usr/include/google/protobuf/generated_message_reflection.h \
- /usr/include/google/protobuf/generated_enum_reflection.h \
- /usr/include/google/protobuf/generated_enum_util.h \
- /usr/include/google/protobuf/unknown_field_set.h \
- /usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
- /usr/include/google/protobuf/io/zero_copy_stream.h \
- /usr/include/google/protobuf/stubs/stl_util.h \
- /usr/include/google/protobuf/parse_context.h \
- /usr/include/google/protobuf/endian.h \
- /usr/include/google/protobuf/inlined_string_field.h \
- /usr/include/google/protobuf/message.h \
- /usr/include/google/protobuf/map.h \
- /usr/include/google/protobuf/map_type_handler.h \
- /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert
+ /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert \
+ /home/wevix/my_mprpc/src/include/mprpcapplication.h \
+ /home/wevix/my_mprpc/src/include/mprpcconfig.h

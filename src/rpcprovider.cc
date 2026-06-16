@@ -1,5 +1,6 @@
 #include"rpcprovider.h"
 #include"rpcheader.pb.h"
+
 void RpcProvider::NotifyService(google::protobuf::Service *service)
 {
     ServiceInfo service_info;
@@ -158,11 +159,12 @@ void RpcProvider::OnMessage(const muduo::net::TcpConnectionPtr& conn, muduo::net
     // 业务层（UserService）在执行完逻辑后，会将结果填入这个 response 对象中。
     google::protobuf::Message *response = service->GetResponsePrototype(method).New();
 
-
+    // 4. 最后写回调函数done
     // 为 CallMethod 绑定一个回调函数（Closure）
     // 这里的逻辑很巧妙：当业务层（如 UserService::Login）处理完业务后，会调用 done->Run()
     // 这个 Run() 实际上执行的就是我们这里绑定的 SendRpcResponse 方法。
     // 我们需要把当前的连接 (conn) 和 响应对象 (response) 传给这个回调函数。
+    // 这个是模板函数，需要手写<>/自动推导传参类型
     google::protobuf::Closure *done = google::protobuf::NewCallback<RpcProvider, 
                                                                   const muduo::net::TcpConnectionPtr&, 
                                                                   google::protobuf::Message*>
