@@ -117,25 +117,63 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-example/caller/CMakeFiles/consumer.dir/rule:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/consumer.dir/rule
-.PHONY : example/caller/CMakeFiles/consumer.dir/rule
+example/caller/CMakeFiles/user_consumer.dir/rule:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/user_consumer.dir/rule
+.PHONY : example/caller/CMakeFiles/user_consumer.dir/rule
 
 # Convenience name for target.
-consumer: example/caller/CMakeFiles/consumer.dir/rule
-.PHONY : consumer
+user_consumer: example/caller/CMakeFiles/user_consumer.dir/rule
+.PHONY : user_consumer
 
 # fast build rule for target.
-consumer/fast:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
-.PHONY : consumer/fast
+user_consumer/fast:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/build
+.PHONY : user_consumer/fast
+
+# Convenience name for target.
+example/caller/CMakeFiles/friend_consumer.dir/rule:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example/caller/CMakeFiles/friend_consumer.dir/rule
+.PHONY : example/caller/CMakeFiles/friend_consumer.dir/rule
+
+# Convenience name for target.
+friend_consumer: example/caller/CMakeFiles/friend_consumer.dir/rule
+.PHONY : friend_consumer
+
+# fast build rule for target.
+friend_consumer/fast:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/build
+.PHONY : friend_consumer/fast
+
+__/friend.pb.o: __/friend.pb.cc.o
+.PHONY : __/friend.pb.o
+
+# target to build an object file
+__/friend.pb.cc.o:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/__/friend.pb.cc.o
+.PHONY : __/friend.pb.cc.o
+
+__/friend.pb.i: __/friend.pb.cc.i
+.PHONY : __/friend.pb.i
+
+# target to preprocess a source file
+__/friend.pb.cc.i:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/__/friend.pb.cc.i
+.PHONY : __/friend.pb.cc.i
+
+__/friend.pb.s: __/friend.pb.cc.s
+.PHONY : __/friend.pb.s
+
+# target to generate assembly for a file
+__/friend.pb.cc.s:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/__/friend.pb.cc.s
+.PHONY : __/friend.pb.cc.s
 
 __/user.pb.o: __/user.pb.cc.o
 .PHONY : __/user.pb.o
 
 # target to build an object file
 __/user.pb.cc.o:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.o
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/__/user.pb.cc.o
 .PHONY : __/user.pb.cc.o
 
 __/user.pb.i: __/user.pb.cc.i
@@ -143,7 +181,7 @@ __/user.pb.i: __/user.pb.cc.i
 
 # target to preprocess a source file
 __/user.pb.cc.i:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.i
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/__/user.pb.cc.i
 .PHONY : __/user.pb.cc.i
 
 __/user.pb.s: __/user.pb.cc.s
@@ -151,15 +189,39 @@ __/user.pb.s: __/user.pb.cc.s
 
 # target to generate assembly for a file
 __/user.pb.cc.s:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/__/user.pb.cc.s
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/__/user.pb.cc.s
 .PHONY : __/user.pb.cc.s
+
+callfriendservice.o: callfriendservice.cc.o
+.PHONY : callfriendservice.o
+
+# target to build an object file
+callfriendservice.cc.o:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.o
+.PHONY : callfriendservice.cc.o
+
+callfriendservice.i: callfriendservice.cc.i
+.PHONY : callfriendservice.i
+
+# target to preprocess a source file
+callfriendservice.cc.i:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.i
+.PHONY : callfriendservice.cc.i
+
+callfriendservice.s: callfriendservice.cc.s
+.PHONY : callfriendservice.s
+
+# target to generate assembly for a file
+callfriendservice.cc.s:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.s
+.PHONY : callfriendservice.cc.s
 
 calluserservice.o: calluserservice.cc.o
 .PHONY : calluserservice.o
 
 # target to build an object file
 calluserservice.cc.o:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/calluserservice.cc.o
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/calluserservice.cc.o
 .PHONY : calluserservice.cc.o
 
 calluserservice.i: calluserservice.cc.i
@@ -167,7 +229,7 @@ calluserservice.i: calluserservice.cc.i
 
 # target to preprocess a source file
 calluserservice.cc.i:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/calluserservice.cc.i
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/calluserservice.cc.i
 .PHONY : calluserservice.cc.i
 
 calluserservice.s: calluserservice.cc.s
@@ -175,7 +237,7 @@ calluserservice.s: calluserservice.cc.s
 
 # target to generate assembly for a file
 calluserservice.cc.s:
-	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/calluserservice.cc.s
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/calluserservice.cc.s
 .PHONY : calluserservice.cc.s
 
 # Help Target
@@ -186,10 +248,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... consumer"
+	@echo "... friend_consumer"
+	@echo "... user_consumer"
+	@echo "... __/friend.pb.o"
+	@echo "... __/friend.pb.i"
+	@echo "... __/friend.pb.s"
 	@echo "... __/user.pb.o"
 	@echo "... __/user.pb.i"
 	@echo "... __/user.pb.s"
+	@echo "... callfriendservice.o"
+	@echo "... callfriendservice.i"
+	@echo "... callfriendservice.s"
 	@echo "... calluserservice.o"
 	@echo "... calluserservice.i"
 	@echo "... calluserservice.s"

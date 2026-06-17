@@ -8,6 +8,7 @@
 /home/wevix/my_mprpc/build/example/callee/CMakeFiles/provider.dir
 /home/wevix/my_mprpc/build/example/callee/CMakeFiles/edit_cache.dir
 /home/wevix/my_mprpc/build/example/callee/CMakeFiles/rebuild_cache.dir
-/home/wevix/my_mprpc/build/example/caller/CMakeFiles/consumer.dir
+/home/wevix/my_mprpc/build/example/caller/CMakeFiles/user_consumer.dir
+/home/wevix/my_mprpc/build/example/caller/CMakeFiles/friend_consumer.dir
 /home/wevix/my_mprpc/build/example/caller/CMakeFiles/edit_cache.dir
 /home/wevix/my_mprpc/build/example/caller/CMakeFiles/rebuild_cache.dir

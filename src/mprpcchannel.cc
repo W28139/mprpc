@@ -32,7 +32,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     }
     else
     {
-        controller->SetFailed("serialize request error!");
+        // controller->SetFailed("serialize request error!");
         return;
     }
 
@@ -50,7 +50,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     }
     else
     {
-        controller->SetFailed("serialize rpc header error!");
+        // controller->SetFailed("serialize rpc header error!");
         return;
     }
 
@@ -66,7 +66,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     int clientfd = socket(AF_INET, SOCK_STREAM, 0);
     if (-1 == clientfd)
     {
-        controller->SetFailed("create socket error! errno:" + std::to_string(errno));
+        // controller->SetFailed("create socket error! errno:" + std::to_string(errno));
         return;
     }
 
@@ -76,14 +76,14 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
 
     struct sockaddr_in server_addr;
     server_addr.sin_family = AF_INET;
-    server_addr.sin_port = port; // 示例端口
+    server_addr.sin_port = htons(port); // 示例端口
     server_addr.sin_addr.s_addr = inet_addr(ip.c_str()); // 示例IP
 
     // 连接 rpc 服务节点
     if (-1 == connect(clientfd, (struct sockaddr*)&server_addr, sizeof(server_addr)))
     {
         close(clientfd);
-        controller->SetFailed("connect error! errno:" + std::to_string(errno));
+        // controller->SetFailed("connect error! errno:" + std::to_string(errno));
         return;
     }
 
@@ -91,7 +91,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     if (-1 == send(clientfd, send_rpc_str.c_str(), send_rpc_str.size(), 0))
     {
         close(clientfd);
-        controller->SetFailed("send error! errno:" + std::to_string(errno));
+        // controller->SetFailed("send error! errno:" + std::to_string(errno));
         return;
     }
 
@@ -101,7 +101,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     if (-1 == (recv_size = recv(clientfd, recv_buf, 1024, 0)))
     {
         close(clientfd);
-        controller->SetFailed("recv error! errno:" + std::to_string(errno));
+        // controller->SetFailed("recv error! errno:" + std::to_string(errno));
         return;
     }
 
@@ -110,7 +110,7 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
     if (!response->ParseFromArray(recv_buf, recv_size))
     {
         close(clientfd);
-        controller->SetFailed("parse error! response_str:" + std::string(recv_buf));
+        // controller->SetFailed("parse error! response_str:" + std::string(recv_buf));
         return;
     }
 

@@ -143,17 +143,30 @@ provider/fast:
 .PHONY : provider/fast
 
 #=============================================================================
-# Target rules for targets named consumer
+# Target rules for targets named user_consumer
 
 # Build rule for target.
-consumer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consumer
-.PHONY : consumer
+user_consumer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 user_consumer
+.PHONY : user_consumer
 
 # fast build rule for target.
-consumer/fast:
-	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
-.PHONY : consumer/fast
+user_consumer/fast:
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/user_consumer.dir/build.make example/caller/CMakeFiles/user_consumer.dir/build
+.PHONY : user_consumer/fast
+
+#=============================================================================
+# Target rules for targets named friend_consumer
+
+# Build rule for target.
+friend_consumer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 friend_consumer
+.PHONY : friend_consumer
+
+# fast build rule for target.
+friend_consumer/fast:
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/friend_consumer.dir/build.make example/caller/CMakeFiles/friend_consumer.dir/build
+.PHONY : friend_consumer/fast
 
 # Help Target
 help:
@@ -163,9 +176,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... consumer"
+	@echo "... friend_consumer"
 	@echo "... mprpc"
 	@echo "... provider"
+	@echo "... user_consumer"
 .PHONY : help
 
 

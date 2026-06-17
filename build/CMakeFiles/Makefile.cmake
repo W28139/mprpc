@@ -54,5 +54,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/mprpc.dir/DependInfo.cmake"
   "example/callee/CMakeFiles/provider.dir/DependInfo.cmake"
-  "example/caller/CMakeFiles/consumer.dir/DependInfo.cmake"
+  "example/caller/CMakeFiles/user_consumer.dir/DependInfo.cmake"
+  "example/caller/CMakeFiles/friend_consumer.dir/DependInfo.cmake"
   )
