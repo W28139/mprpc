@@ -1,5 +1,6 @@
 #include"rpcprovider.h"
 #include"rpcheader.pb.h"
+#include"logger.h"
 
 void RpcProvider::NotifyService(google::protobuf::Service *service)
 {

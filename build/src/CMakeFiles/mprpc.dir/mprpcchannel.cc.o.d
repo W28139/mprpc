@@ -284,4 +284,5 @@ src/CMakeFiles/mprpc.dir/mprpcchannel.cc.o: \
  /home/wevix/my_mprpc/src/include/rpcheader.pb.h \
  /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert \
  /home/wevix/my_mprpc/src/include/mprpcapplication.h \
- /home/wevix/my_mprpc/src/include/mprpcconfig.h
+ /home/wevix/my_mprpc/src/include/mprpcconfig.h \
+ /home/wevix/my_mprpc/src/include/mprpccontroller.h

@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/consumer.dir/calluserservice.cc.o CMakeFiles/consumer.dir/__/user.pb.cc.o -o /home/wevix/my_mprpc/bin/consumer   -L/home/wevix/my_mprpc/lib  -Wl,-rpath,/home/wevix/my_mprpc/lib /home/wevix/my_mprpc/lib/libmprpc.a -lprotobuf -lmuduo_net -lmuduo_base -lpthread 

@@ -1,0 +1,2 @@
+15:15:18=>first log message!15:15:18=>/home/wevix/my_mprpc/example/callee/friendservice.cc:main:4415:18:13=>first log message!15:18:13=>/home/wevix/my_mprpc/example/callee/friendservice.cc:main:4415:32:12=>first log message!
+15:32:12=>/home/wevix/my_mprpc/example/callee/friendservice.cc:main:44

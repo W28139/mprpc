@@ -1,6 +1,8 @@
-example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: \
- /home/wevix/my_mprpc/example/friend.pb.cc /usr/include/stdc-predef.h \
- /home/wevix/my_mprpc/example/friend.pb.h /usr/include/c++/13/limits \
+src/CMakeFiles/mprpc.dir/mprpccontroller.cc.o: \
+ /home/wevix/my_mprpc/src/mprpccontroller.cc /usr/include/stdc-predef.h \
+ /home/wevix/my_mprpc/src/include/mprpccontroller.h \
+ /usr/include/google/protobuf/service.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -11,8 +13,7 @@ example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
- /usr/include/c++/13/pstl/pstl_config.h /usr/include/c++/13/string \
- /usr/include/c++/13/bits/requires_hosted.h \
+ /usr/include/c++/13/pstl/pstl_config.h \
  /usr/include/c++/13/bits/stringfwd.h \
  /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/c++/13/bits/char_traits.h \
@@ -115,26 +116,10 @@ example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
+ /usr/include/google/protobuf/stubs/callback.h \
+ /usr/include/google/protobuf/stubs/macros.h \
  /usr/include/google/protobuf/port_def.inc \
  /usr/include/google/protobuf/port_undef.inc \
- /usr/include/google/protobuf/io/coded_stream.h /usr/include/assert.h \
- /usr/include/c++/13/atomic /usr/include/c++/13/bits/atomic_base.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /usr/include/c++/13/climits \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/13/cstring \
- /usr/include/string.h /usr/include/strings.h /usr/include/c++/13/utility \
- /usr/include/c++/13/bits/stl_relops.h \
  /usr/include/google/protobuf/stubs/common.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
@@ -160,6 +145,7 @@ example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
  /usr/include/c++/13/bits/locale_classes.h \
@@ -186,12 +172,18 @@ example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: \
  /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/align.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/include/c++/13/bits/unique_ptr.h \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \
  /usr/include/c++/13/bits/allocated_ptr.h \
  /usr/include/c++/13/ext/concurrence.h \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/bits/atomic_base.h \
+ /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h /usr/include/c++/13/set \
  /usr/include/c++/13/bits/stl_set.h \
@@ -199,62 +191,16 @@ example/caller/CMakeFiles/consumer.dir/__/friend.pb.cc.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /usr/include/google/protobuf/stubs/macros.h \
  /usr/include/google/protobuf/stubs/platform_macros.h \
- /usr/include/google/protobuf/stubs/port.h /usr/include/c++/13/cstdint \
- /usr/include/c++/13/stdlib.h /usr/include/byteswap.h \
+ /usr/include/google/protobuf/stubs/port.h /usr/include/assert.h \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/stdlib.h \
+ /usr/include/string.h /usr/include/strings.h /usr/include/byteswap.h \
  /usr/include/google/protobuf/stubs/stringpiece.h \
- /usr/include/google/protobuf/stubs/hash.h \
- /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/limits /usr/include/google/protobuf/stubs/hash.h \
+ /usr/include/c++/13/cstring /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
  /usr/include/c++/13/bits/hashtable_policy.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/unordered_set \
- /usr/include/c++/13/bits/unordered_set.h \
- /usr/include/google/protobuf/stubs/logging.h \
- /usr/include/google/protobuf/stubs/status.h \
- /usr/include/google/protobuf/stubs/strutil.h \
- /usr/include/google/protobuf/port.h /usr/include/google/protobuf/arena.h \
- /usr/include/google/protobuf/arena_impl.h \
- /usr/include/google/protobuf/arenaz_sampler.h \
- /usr/include/google/protobuf/arenastring.h \
- /usr/include/google/protobuf/explicitly_constructed.h \
- /usr/include/google/protobuf/generated_message_util.h \
- /usr/include/google/protobuf/stubs/once.h /usr/include/c++/13/mutex \
- /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
- /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
- /usr/include/c++/13/bits/std_mutex.h \
- /usr/include/c++/13/bits/unique_lock.h \
- /usr/include/google/protobuf/any.h \
- /usr/include/google/protobuf/message_lite.h \
- /usr/include/google/protobuf/metadata_lite.h \
- /usr/include/google/protobuf/has_bits.h \
- /usr/include/google/protobuf/implicit_weak_message.h \
- /usr/include/google/protobuf/repeated_field.h \
- /usr/include/c++/13/iterator /usr/include/c++/13/bits/stream_iterator.h \
- /usr/include/google/protobuf/repeated_ptr_field.h \
- /usr/include/google/protobuf/wire_format_lite.h \
- /usr/include/google/protobuf/stubs/casts.h \
- /usr/include/google/protobuf/generated_message_reflection.h \
- /usr/include/google/protobuf/descriptor.h \
- /usr/include/google/protobuf/stubs/mutex.h \
- /usr/include/google/protobuf/generated_enum_reflection.h \
- /usr/include/google/protobuf/generated_enum_util.h \
- /usr/include/google/protobuf/unknown_field_set.h \
- /usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
- /usr/include/google/protobuf/stubs/callback.h \
- /usr/include/google/protobuf/io/zero_copy_stream.h \
- /usr/include/google/protobuf/stubs/stl_util.h \
- /usr/include/google/protobuf/parse_context.h \
- /usr/include/google/protobuf/endian.h \
- /usr/include/google/protobuf/inlined_string_field.h \
- /usr/include/google/protobuf/message.h \
- /usr/include/google/protobuf/map.h /usr/include/c++/13/functional \
- /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/array \
- /usr/include/c++/13/compare \
- /usr/include/google/protobuf/map_type_handler.h \
- /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert \
- /usr/include/google/protobuf/service.h \
- /usr/include/google/protobuf/reflection_ops.h \
- /usr/include/google/protobuf/wire_format.h
+ /usr/include/c++/13/bits/unordered_set.h

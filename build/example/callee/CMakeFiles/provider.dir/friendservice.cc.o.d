@@ -258,6 +258,8 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: \
  /usr/include/google/protobuf/service.h \
  /home/wevix/my_mprpc/src/include/mprpcapplication.h \
  /home/wevix/my_mprpc/src/include/mprpcconfig.h \
+ /home/wevix/my_mprpc/src/include/mprpcchannel.h \
+ /home/wevix/my_mprpc/src/include/mprpccontroller.h \
  /home/wevix/my_mprpc/src/include/rpcprovider.h \
  /usr/local/include/muduo/net/TcpServer.h \
  /usr/local/include/muduo/base/Atomic.h \
@@ -351,4 +353,11 @@ example/callee/CMakeFiles/provider.dir/friendservice.cc.o: \
  /usr/local/include/muduo/net/EventLoop.h \
  /usr/local/include/muduo/base/Mutex.h \
  /usr/local/include/muduo/base/CurrentThread.h \
- /usr/local/include/muduo/net/TimerId.h
+ /usr/local/include/muduo/net/TimerId.h \
+ /home/wevix/my_mprpc/src/include/logger.h \
+ /home/wevix/my_mprpc/src/include/lockqueue.h /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /usr/include/c++/13/condition_variable

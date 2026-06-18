@@ -160,26 +160,12 @@ example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.o: \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/erase_if.h \
- /home/wevix/my_mprpc/example/friend.pb.h /usr/include/c++/13/limits \
+ /home/wevix/my_mprpc/src/include/mprpcchannel.h \
+ /usr/include/google/protobuf/service.h \
+ /usr/include/google/protobuf/stubs/callback.h \
+ /usr/include/google/protobuf/stubs/macros.h \
  /usr/include/google/protobuf/port_def.inc \
  /usr/include/google/protobuf/port_undef.inc \
- /usr/include/google/protobuf/io/coded_stream.h /usr/include/assert.h \
- /usr/include/c++/13/atomic /usr/include/c++/13/bits/atomic_base.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /usr/include/c++/13/climits \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
- /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
- /usr/include/x86_64-linux-gnu/bits/local_lim.h \
- /usr/include/linux/limits.h \
- /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
- /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/13/cstring \
- /usr/include/string.h /usr/include/strings.h /usr/include/c++/13/utility \
- /usr/include/c++/13/bits/stl_relops.h \
  /usr/include/google/protobuf/stubs/common.h \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
@@ -192,12 +178,18 @@ example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.o: \
  /usr/include/c++/13/bits/stl_multimap.h /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bits/unique_ptr.h \
+ /usr/include/c++/13/bits/align.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/include/c++/13/bits/unique_ptr.h \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \
  /usr/include/c++/13/bits/allocated_ptr.h \
  /usr/include/c++/13/ext/concurrence.h \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
+ /usr/include/c++/13/bits/atomic_base.h \
+ /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h /usr/include/c++/13/set \
  /usr/include/c++/13/bits/stl_set.h \
@@ -205,14 +197,27 @@ example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.o: \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc \
- /usr/include/google/protobuf/stubs/macros.h \
  /usr/include/google/protobuf/stubs/platform_macros.h \
- /usr/include/google/protobuf/stubs/port.h /usr/include/c++/13/cstdint \
- /usr/include/c++/13/stdlib.h /usr/include/byteswap.h \
+ /usr/include/google/protobuf/stubs/port.h /usr/include/assert.h \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/stdlib.h \
+ /usr/include/string.h /usr/include/strings.h /usr/include/byteswap.h \
  /usr/include/google/protobuf/stubs/stringpiece.h \
- /usr/include/google/protobuf/stubs/hash.h \
- /usr/include/c++/13/unordered_set \
+ /usr/include/c++/13/limits /usr/include/google/protobuf/stubs/hash.h \
+ /usr/include/c++/13/cstring /usr/include/c++/13/unordered_set \
  /usr/include/c++/13/bits/unordered_set.h \
+ /home/wevix/my_mprpc/src/include/mprpccontroller.h \
+ /home/wevix/my_mprpc/example/friend.pb.h \
+ /usr/include/google/protobuf/io/coded_stream.h \
+ /usr/include/c++/13/atomic /usr/include/c++/13/climits \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/c++/13/utility \
+ /usr/include/c++/13/bits/stl_relops.h \
  /usr/include/google/protobuf/stubs/logging.h \
  /usr/include/google/protobuf/stubs/status.h \
  /usr/include/google/protobuf/stubs/strutil.h \
@@ -244,7 +249,6 @@ example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.o: \
  /usr/include/google/protobuf/generated_enum_util.h \
  /usr/include/google/protobuf/unknown_field_set.h \
  /usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
- /usr/include/google/protobuf/stubs/callback.h \
  /usr/include/google/protobuf/io/zero_copy_stream.h \
  /usr/include/google/protobuf/stubs/stl_util.h \
  /usr/include/google/protobuf/parse_context.h \
@@ -255,6 +259,4 @@ example/caller/CMakeFiles/friend_consumer.dir/callfriendservice.cc.o: \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/array \
  /usr/include/c++/13/compare \
  /usr/include/google/protobuf/map_type_handler.h \
- /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert \
- /usr/include/google/protobuf/service.h \
- /home/wevix/my_mprpc/src/include/mprpcchannel.h
+ /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert

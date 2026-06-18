@@ -302,6 +302,8 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/local/include/muduo/net/TimerId.h \
  /home/wevix/my_mprpc/src/include/mprpcapplication.h \
  /home/wevix/my_mprpc/src/include/mprpcconfig.h \
+ /home/wevix/my_mprpc/src/include/mprpcchannel.h \
+ /home/wevix/my_mprpc/src/include/mprpccontroller.h \
  /usr/include/google/protobuf/descriptor.h \
  /usr/include/google/protobuf/stubs/logging.h \
  /usr/include/google/protobuf/stubs/status.h \
@@ -352,4 +354,11 @@ src/CMakeFiles/mprpc.dir/rpcprovider.cc.o: \
  /usr/include/google/protobuf/message.h \
  /usr/include/google/protobuf/map.h \
  /usr/include/google/protobuf/map_type_handler.h \
- /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert
+ /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert \
+ /home/wevix/my_mprpc/src/include/logger.h \
+ /home/wevix/my_mprpc/src/include/lockqueue.h /usr/include/c++/13/queue \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/thread /usr/include/c++/13/bits/std_thread.h \
+ /usr/include/c++/13/bits/this_thread_sleep.h \
+ /usr/include/c++/13/condition_variable
