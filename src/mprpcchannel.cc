@@ -12,6 +12,7 @@
 #include "rpcheader.pb.h"
 #include"mprpcapplication.h"
 #include"mprpccontroller.h"
+#include"ZookeeperUtil.h"
 
 void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
                                 google::protobuf::RpcController* controller, 
@@ -71,9 +72,32 @@ void MprpcChannel::CallMethod(const google::protobuf::MethodDescriptor* method,
         return;
     }
 
-    // 这里假设通过某个配置类获取服务器地址
-    std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
-    uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
+    // std::string ip = MprpcApplication::GetInstance().GetConfig().Load("rpcserverip");
+    // uint16_t port = atoi(MprpcApplication::GetInstance().GetConfig().Load("rpcserverport").c_str());
+    ZkClient zkCli;
+    zkCli.Start();
+
+    std::string method_path = "/" + service_name + "/" + method_name;
+    std::cout << "DEBUG: querying path [" << method_path << "]" << std::endl;
+
+    std::string host_data = zkCli.GetData(method_path.c_str());
+    std::cout << "DEBUG: got host_data [" << host_data << "]" << std::endl;
+    
+    if (host_data == "")
+    {
+        controller->SetFailed(method_path + " is not exist!");
+        return;
+    }
+
+    int idx = host_data.find(":");
+    if (idx == -1)
+    {
+        controller->SetFailed(method_path + " address is invalid!");
+        return;
+    }
+
+    std::string ip = host_data.substr(0, idx);
+    uint16_t port = atoi(host_data.substr(idx+1, host_data.size()-idx).c_str());
 
     struct sockaddr_in server_addr;
     server_addr.sin_family = AF_INET;

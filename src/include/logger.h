@@ -1,10 +1,21 @@
 #pragma once
-#include"lockqueue.h"
+#include <string>     
+#include <thread>  
+#include "lockqueue.h"
+#include "logger.h"
+#include <time.h>
+#include <iostream>
 enum LogLevel
 {
     INFO,   // 普通信息
     ERROR,  // 错误信息
 };
+
+struct LogMsg {
+    LogLevel level;
+    std::string msg;
+};
+
 // Mprpc提供的日志系统
 class Logger
 {
@@ -14,10 +25,10 @@ public:
     // 设置日志级别
     void SetLogLevel(LogLevel level);
     // 写日志,把日志写入lockqueue缓冲区中
-    void Log(std::string msg);
+    void Log(LogLevel level, std::string msg);
 private:
     int m_loglevel; // 记录入职级别
-    LockQueue<std::string> m_lockQue;   // 日志缓冲队列
+    LockQueue<LogMsg> m_lockQue; 
 
     Logger();
     Logger(const Logger&) = delete;
@@ -26,21 +37,15 @@ private:
 
 // 定义日志级别宏
 #define LOG_INFO(logmsgformat, ...) \
-    do \
-    { \
-        Logger &logger = Logger::GetInstance(); \
-        logger.SetLogLevel(INFO); \
+    do { \
         char c[1024] = {0}; \
         snprintf(c, 1024, logmsgformat, ##__VA_ARGS__); \
-        logger.Log(c); \
+        Logger::GetInstance().Log(INFO, c); \
     } while (0)
 
 #define LOG_ERR(logmsgformat, ...) \
-    do \
-    { \
-        Logger &logger = Logger::GetInstance(); \
-        logger.SetLogLevel(ERROR); \
+    do { \
         char c[1024] = {0}; \
         snprintf(c, 1024, logmsgformat, ##__VA_ARGS__); \
-        logger.Log(c); \
+        Logger::GetInstance().Log(ERROR, c); \
     } while (0)

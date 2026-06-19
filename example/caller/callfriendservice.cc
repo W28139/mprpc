@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 
     stub.GetFriendsList(&controller,&request,&response,nullptr);
 
-    if(controller.Failed())
+    if(!controller.Failed())
     {
         if(response.result().errcode()==0)
         {

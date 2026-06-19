@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/wevix/my_mprpc/lib/libmprpc.a"
   "/home/wevix/my_mprpc/lib/libmprpc.pdb"
+  "CMakeFiles/mprpc.dir/ZookeeperUtil.cc.o"
+  "CMakeFiles/mprpc.dir/ZookeeperUtil.cc.o.d"
   "CMakeFiles/mprpc.dir/logger.cc.o"
   "CMakeFiles/mprpc.dir/logger.cc.o.d"
   "CMakeFiles/mprpc.dir/mprpcapplication.cc.o"

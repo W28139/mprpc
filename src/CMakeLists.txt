@@ -6,6 +6,7 @@ set(SRC_LIST
             rpcprovider.cc 
             mprpcchannel.cc
             mprpccontroller.cc
-            logger.cc)
+            logger.cc
+            ZookeeperUtil)
 add_library(mprpc ${SRC_LIST})
-target_link_libraries(mprpc muduo_net muduo_base pthread)
+target_link_libraries(mprpc muduo_net muduo_base pthread zookeeper_mt)

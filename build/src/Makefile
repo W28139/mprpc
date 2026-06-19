@@ -130,6 +130,30 @@ mprpc/fast:
 	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/build
 .PHONY : mprpc/fast
 
+ZookeeperUtil.o: ZookeeperUtil.cc.o
+.PHONY : ZookeeperUtil.o
+
+# target to build an object file
+ZookeeperUtil.cc.o:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/ZookeeperUtil.cc.o
+.PHONY : ZookeeperUtil.cc.o
+
+ZookeeperUtil.i: ZookeeperUtil.cc.i
+.PHONY : ZookeeperUtil.i
+
+# target to preprocess a source file
+ZookeeperUtil.cc.i:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/ZookeeperUtil.cc.i
+.PHONY : ZookeeperUtil.cc.i
+
+ZookeeperUtil.s: ZookeeperUtil.cc.s
+.PHONY : ZookeeperUtil.s
+
+# target to generate assembly for a file
+ZookeeperUtil.cc.s:
+	cd /home/wevix/my_mprpc/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/mprpc.dir/build.make src/CMakeFiles/mprpc.dir/ZookeeperUtil.cc.s
+.PHONY : ZookeeperUtil.cc.s
+
 logger.o: logger.cc.o
 .PHONY : logger.o
 
@@ -307,6 +331,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... mprpc"
+	@echo "... ZookeeperUtil.o"
+	@echo "... ZookeeperUtil.i"
+	@echo "... ZookeeperUtil.s"
 	@echo "... logger.o"
 	@echo "... logger.i"
 	@echo "... logger.s"
